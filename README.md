@@ -124,3 +124,8 @@ When you have finished the assignment, create a github repository and send us th
   
 
 Thank you and good luck! 🙏
+
+# Todo to improve the project
+1. Use a tool to track logs
+2. Add Linter and format
+3. Add some unit testing to specific functions
