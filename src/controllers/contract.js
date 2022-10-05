@@ -15,7 +15,7 @@ const getContractById = async (req, res, next) => {
 
     res.json(contract);
   } catch (error) {
-    return next(err);
+    return next(error);
   }
 };
 
@@ -28,7 +28,7 @@ const getActiveContracts = async (req, res, next) => {
 
     res.json(contracts);
   } catch (err) {
-    return next(err);
+    return next(error);
   }
 };
 

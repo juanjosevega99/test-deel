@@ -25,9 +25,12 @@ app.set('services', services);
 app.use(router);
 
 app.use((err, req, res, next) => {
-  if (err) {
-    Logger.error('Something went wrong:', err);
-    return res.status(err.code).json({ code: err.message });
+  const Logger = req.app.get('logger');
+
+  Logger.error(err);
+
+  if (err.apiError) {
+    return res.status(err.status).send(err.message);
   }
   res.status(500).send('Internal Server Error');
 });

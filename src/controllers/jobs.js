@@ -19,7 +19,7 @@ const payJob = async (req, res, next) => {
     await Job.payJob({ profileId, jobId });
     res.sendStatus(200);
   } catch (error) {
-    return next(err);
+    return next(error);
   }
 };
 

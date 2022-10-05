@@ -11,7 +11,7 @@ const depositBalance = async (req, res, next) => {
     await User.depositBalance({ userId, amount });
     res.sendStatus(200);
   } catch (error) {
-    return next(err);
+    return next(error);
   }
 };
 
